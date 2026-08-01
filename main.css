@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    /*color: #FFFf33;*/
+    color: #e5e4e2;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: minmax(0, 900px);
+    align-content: center;
+    justify-content: center;
+}
+
+header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+header img {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border-width: 5px;
+    border-style: double;
+    border-color: #00ffff;
+}
+
+#siteDescription {
+    margin: 10px;
+    width: 70%;
+    justify-self: center;
+}
+
+nav.horizontalNav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+nav.horizontalNav li:nth-child(1) a { color: #ffd1dc}
+nav.horizontalNav li:nth-child(2) a { color: #b2fab4}
+nav.horizontalNav li:nth-child(3) a { color: #ff355e}
+nav.horizontalNav li:nth-child(4) a { color: #ff5e00}
+nav.horizontalNav li:nth-child(5) a { color: #89cff0}
+nav.horizontalNav li:nth-child(6) a { color: #fffff0}
+
+nav.horizontalNav li a {
+    box-sizing: content-box;
+    display: block;
+    border-color: #e6ff66;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 65px;
+    background-color: rgba(230, 255, 102, 0.2) ;
+}
+
+nav.horizontalNav li a:hover {
+    color: #e0b0b4;
+}
+
+nav.horizontalNav li:nth-child(odd) {
+    margin: 5px;
+}
+
+nav.horizontalNav li:nth-child(even) {
+    margin-top: 35px;
+}
+
+
+/* form layout styles */
+
+/* centers form & sets width */
+form {
+    display: grid;
+    justify-self: center;
+    width: 70%;
+}
+
+/* lays out label & input in a row */
+div.formRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px;
+}
+
+/* gives starting width */
+div.formRow > * {
+    flex: 1 1 150px;
+}
+
+/* styel field labels */
+div.formRow label {
+    color: #89cff0;
+    font-size: 0.9em;
+}
+
+/* style inputs */
+div.formRow input, div.formRow select, div.formRow textarea {
+    background-color: rgba(230, 255, 102, 0.1);
+    border: 2px solid #00ffff;
+    border-radius: 6px;
+    color: #e5e4e2;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 10px;
+}
+
+/* changes border color when selected */
+div.formRow input:focus, div.formRow select:focus, div.formRow textarea:focus {
+    outline: none;
+    border-color: #e0b0b4;
+}
+
+/* allow message box to only resize vertically */
+div.formRow textarea {
+    resize: vertical;
+}
+
+div.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+div.buttons input[type="submit"], div.buttons input[type="reset"] {
+    padding: 10px 25px;
+    background-color: rgba(230, 255, 102, 0.2);
+    border: 3px solid #e6ff66;
+    border-radius: 30px;
+    color: #e5e4e2;
+    font-family: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+div.buttons input[type="submit"]:hover, div.buttons input[type="reset"]:hover {
+    color: #e0b0b4;
+    border-color: #e0b0b4;
+}
+
+/* page intro layout*/
+div.seasonIntro {
+    width: 70%;
+    justify-self: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+div.seasonIntro.spring h1 {
+    color: #b2fab4;
+    font-size: 2rem;
+}
+
+div.seasonIntro.summer h1 {
+    color: #ff355e;
+    font-size: 2rem;
+}
+
+div.seasonIntro.fall h1 {
+    color: #ff5e00;
+    font-size: 2rem;
+}
+
+div.seasonIntro.winter h1 {
+    color: #89cff0;
+    font-size: 2rem;
+}
+
+/* card layout */
+div.card {
+    background-color: black;
+    border: 1px solid #00ffff;
+    color: #e5e4e2;
+}
+
+div.card .list-group-item {
+    background-color: black;
+    color: #e5e4e2;
+    border-color: #00ffff;
+}
+
+div.card-body h2 {
+    font-size: 1.5rem;
+}
+
+p.photo-link {
+    margin-top: 8px;
+    font-size: 0.85em;
+}
+
+p.photo-link a {
+    color: #ffc94d;
+    text-decoration: underline;
+}
+
+p.photo-link a:hover {
+    color: #e0b0b4;
+}
+
+body.spring-page .card-title {
+    color: #b2fab4;
+}
+
+body.summer-page .card-title {
+    color: #ff355e;
+}
+
+body.fall-page .card-title {
+    color: #ff5e00;
+}
+
+body.winter-page .card-title {
+    color: #89cff0;
+}
+
+
+
+/* accordion layout */
+div#tipsSection {
+    width: 70%;
+    justify-self: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+div#tipsSection h1 {
+    text-align: center;
+    color: #ffc94d;
+    font-size: 2rem;
+}
+
+div.accordion-item{
+    background-color: rgba(230, 255, 102, 0.05);
+    border: 1px solid #00ffff;
+    margin-top: 8px;
+}
+
+button.accordion-button {
+    background-color: rgba(230, 255, 102, 0.1);
+    color: #e5e4e2;
+    font-family: inherit;
+    box-shadow: none;
+}
+
+button.accordion-button:not(.collapsed) {
+    background-color: rgba(230, 255, 102, 0.25);
+    color: #e5e4e2;
+    box-shadow: none;
+}
+
+button.accordion-button:focus {
+    border-color: #e6ff66;
+    box-shadow: none;
+}
+
+
+div.accordion-body {
+    background-color: black;
+    color: #e5e4e2;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 50px;
+    text-align: center;
+}
+
+footer a { 
+    color: white;
+}
+
+footer a:hover {
+    color: #e0b0b4;
+}
